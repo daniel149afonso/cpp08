@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielafonso <danielafonso@student.42.f    +#+  +:+       +#+        */
+/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:15:16 by danielafons       #+#    #+#             */
-/*   Updated: 2026/02/17 17:16:28 by danielafons      ###   ########.fr       */
+/*   Updated: 2026/02/19 16:00:18 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int main()
 {
+    int tab[] = {2,3,12,3};
+    int a = easyfind(tab, 3);
+
+    std::cout << a << std::endl;
     return 0;
 }
