@@ -3,23 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:16:41 by danielafons       #+#    #+#             */
-/*   Updated: 2026/02/19 15:53:42 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/19 18:06:25 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+#include <vector>
 
 template <typename T>
-T* easyfind(T& a, int nb)
+template <typename T> T::iterator easyfind(T& a, int nb)
 {
-	for (size_t i = 0; i < a.size(); i++)
+	for (template <typename T> T::iterator it = a.begin(); it != a.end(); it++)
 	{
-		if (a[i] == nb)
-			return (&a[i]);
+		if (*it == nb)
+			return (it);
 	}
-	return (NULL);
+	return (a.end());
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// GROS RACISTE DE MERDE
