@@ -14,12 +14,9 @@
 template <typename T>
 typename T::iterator easyfind(T& a, int nb)
 {
-	for (typename T::iterator it = a.begin(); it != a.end(); it++)
-	{
-		if (*it == nb)
-			return (it);
-	}
-	throw OccurenceNotFound();
-	return (a.end());
-}
+	typename T::iterator it = std::find(a.begin(), a.end(), nb);
 
+	if (it == a.end())
+		throw OccurenceNotFound();
+	return (it);
+}
