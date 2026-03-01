@@ -6,19 +6,20 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:16:41 by danielafons       #+#    #+#             */
-/*   Updated: 2026/02/27 15:33:36 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/02/28 14:31:08 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include <set>
+#include <vector>
+#include <algorithm>
 
 class Span
 {
 	private:
 		unsigned int _N;
-		std::set<int> set;
+		std::vector<int> _v;
 	public:
 		Span();
 		Span(unsigned int N);
@@ -30,6 +31,9 @@ class Span
 		void addNumber(int nb);
 		int shortestSpan();
 		int longestSpan();
+		void print_debug();
+	
+		//Exceptions
 		class SpanIsFull: public std::exception{
 			const char * what() const throw();
 		};
