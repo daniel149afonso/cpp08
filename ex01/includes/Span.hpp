@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:16:41 by danielafons       #+#    #+#             */
-/*   Updated: 2026/02/28 14:31:08 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/03/02 12:37:46 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Span
 		void print_debug();
 	
 		template <typename It> 
-		void add(It first, It last){
+		void add_range_iterators(It first, It last){
 			int count = std::distance(first, last);
 
 			if (_v.size() + count > _N)
