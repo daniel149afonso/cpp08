@@ -75,17 +75,9 @@ int Span::longestSpan()
 
 	std::vector<int> tmp = _v;
 	std::sort(tmp.begin(), tmp.end());
-	int shortSpan = tmp[1] - tmp[0];
-
-	for (size_t i = 2; i < tmp.size(); i++)
-	{
-		int diff = tmp[i] - tmp[i - 1];
-		if (diff > shortSpan)
-			shortSpan = diff;
-		if (shortSpan == 0)
-			break;
-	}
-	return shortSpan;
+	int first = tmp[0];
+	int last = tmp[tmp.size() -1];
+	return last - first;
 }
 
 const char* Span::SpanIsFull::what() const throw()

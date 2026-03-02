@@ -33,6 +33,15 @@ class Span
 		int longestSpan();
 		void print_debug();
 	
+		template <typename It> 
+		void add(It first, It last){
+			int count = std::distance(first, last);
+
+			if (_v.size() + count > _N)
+				throw SpanIsFull();
+			_v.insert(_v.end(), first, last);
+		}
+
 		//Exceptions
 		class SpanIsFull: public std::exception{
 			const char * what() const throw();
