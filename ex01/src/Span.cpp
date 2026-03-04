@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 12:56:27 by daniel149af       #+#    #+#             */
-/*   Updated: 2026/02/28 16:47:22 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/03/02 13:03:31 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,4 @@ const char* Span::SpanIsFull::what() const throw()
 const char* Span::SpanNotFound::what() const throw()
 {
 	return ("Error: Span not found.");
-}
-
-void Span::print_debug()
-{
-	for (std::vector<int>::iterator it = _v.begin(); it != _v.end(); it++)
-	{
-		std::cout << *it << std::endl;
-	}
 }
