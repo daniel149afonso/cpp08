@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:15:16 by danielafons       #+#    #+#             */
-/*   Updated: 2026/03/04 15:01:56 by daniel149af      ###   ########.fr       */
+/*   Updated: 2026/03/05 16:17:03 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void testing_subject()
 void testing_reverse()
 {
 	std::cout << "\n\n### TESTING REVERSE STACK ###\n\n" << std::endl;
-	
+
 	MutantStack<int> mstack;
 
 	mstack.push(5);
@@ -60,7 +60,7 @@ void testing_reverse()
 	mstack.push(737);
 
 	mstack.push(0);
-	
+
 	MutantStack<int>::reverse_iterator rit = mstack.rbegin();
 	MutantStack<int>::reverse_iterator rite = mstack.rend();
 	std::cout << "stack: ";
@@ -74,7 +74,6 @@ void testing_reverse()
 
 int main()
 {
-
 	testing_subject();
 	testing_reverse();
 	return 0;
